@@ -52,7 +52,7 @@ Make sure you have these installed:
 
     ```bash
     git clone [YOUR_REPOSITORY_URL]
-    cd [your_project_name] # e.g., cd simple-flask-crud-api
+    cd [your_project_name] # e.g., cd flask-drink-api
     ```
 
 2.  **Create and activate a virtual environment:**
@@ -60,7 +60,8 @@ Make sure you have these installed:
 
     ```bash
     python3 -m venv .venv
-    source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+    source .venv\Scripts\activate  # On Windows
+    source venv/bin/activate  # On MacOS
     ```
 
 3.  **Install dependencies:**
@@ -76,11 +77,10 @@ Make sure you have these installed:
     This tells Flask where your main application file is located.
 
     ```bash
-    export FLASK_APP=app.py # On Windows CMD: set FLASK_APP=app.py
+    export FLASK_APP=application.py # On Windows CMD: set FLASK_APP=app.py
     export FLASK_ENV=development # Optional: Enables Flask's debugger and reloader
     ```
-    (Adjust `app.py` if your main application file is named differently.)
-
+    
 2.  **Start the Flask development server:**
 
     ```bash
