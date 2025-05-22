@@ -77,7 +77,7 @@ Make sure you have these installed:
     This tells Flask where your main application file is located.
 
     ```bash
-    export FLASK_APP=application.py # On Windows CMD: set FLASK_APP=app.py
+    export FLASK_APP=app.py # On Windows CMD: set FLASK_APP=app.py
     export FLASK_ENV=development # Optional: Enables Flask's debugger and reloader
     ```
     

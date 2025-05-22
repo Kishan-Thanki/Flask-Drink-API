@@ -1,6 +1,5 @@
 from flask import Flask, request
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy import except_
 
 app = Flask(__name__)
 
@@ -15,6 +14,9 @@ class Drink(db.Model):
     def __repr__(self):
         return f"{self.name} - {self.description}"
 
+with app.app_context():
+    db.create_all()
+    print("Database tables created successfully!")
 @app.route('/')
 def index():
     return  'Hello!'
@@ -80,3 +82,9 @@ def delete_drink(id: int):
         db.session.rollback()
         print(f"Error deleting drink: {e}")
         return {"message": "Error deleting drink", "error": str(e)}, 500
+
+
+if __name__ == "__main__":
+    with app.app_context():
+        db.create_all()
+        print("Database tables created successfully!")
