@@ -12,9 +12,6 @@
     * [Database Setup](#database-setup)
 * [API Endpoints](#-api-endpoints)
     * [Drinks Resource](#drinks-resource)
-* [Project Structure](#-project-structure)
-* [Contributing](#-contributing)
-* [License](#-license)
 
 ---
 
