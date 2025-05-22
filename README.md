@@ -9,7 +9,6 @@
     * [Prerequisites](#prerequisites)
     * [Installation](#installation)
     * [Running the API](#running-the-api)
-    * [Database Setup](#database-setup)
 * [API Endpoints](#-api-endpoints)
     * [Drinks Resource](#drinks-resource)
 
@@ -85,31 +84,6 @@ Make sure you have these installed:
     ```
     The API will typically be accessible at `http://127.0.0.1:5000/`.
 
-### Database Setup
-
-You need to create the database tables before the API can store any data.
-
-1.  **Create the `create_db.py` script:**
-    This dedicated script ensures your database tables are set up correctly within the Flask application context.
-
-    ```python
-    # create_db.py
-    from app import app, db # Ensure this import path is correct for your project
-
-    if __name__ == '__main__':
-        with app.app_context(): # This pushes the necessary application context
-            db.create_all()
-            print("Database tables created successfully!")
-    ```
-
-2.  **Run the database creation script:**
-
-    ```bash
-    python create_db.py
-    ```
-    This will create a `data.db` file in your project's root directory.
-
----
 
 ## ⚡ API Endpoints
 
